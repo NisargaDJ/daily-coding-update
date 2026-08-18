@@ -27,21 +27,24 @@ console.log("secondlargest :", secondlargest);
 
 
 //3. Remove duplicate elements from an array
-let arr = [1, 2, 3, 4, 2, 1, 5];
-let unique = [];
-for(let i=0; i<arr.length; i++){
-    let isDuplicate = false;
-    for(let j=0; j<unique.length; j++){
-        if(arr[i] === unique[j]){
-            isDuplicate = true;
-            break;
+function removeDuplicates(arr) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        let duplicate = false;
+        for (let j = 0; j < result.length; j++) {
+            if (arr[i] === result[j]) {
+                duplicate = true;
+                break;
+            }
+        }
+        if (!duplicate) {
+            result[result.length] = arr[i];
         }
     }
-    if(!isDuplicate){
-        unique.push(arr[i]);
-    }
+    return result;
 }
-console.log(unique);
+const numbers = [1, 2, 3, 2, 4, 1, 5, 3];
+console.log(removeDuplicates(numbers));
 
 
 

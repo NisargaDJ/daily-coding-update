@@ -1,41 +1,41 @@
-//Find the longest word in a sentence
-function longestWord(sentence) {
-    let word = "";
-    let longest = "";
-    for (let i = 0; i <= sentence.length; i++) {
-        if (sentence[i] !== " " && i !== sentence.length) {
-            word += sentence[i];
-        } else {
-            if (word.length > longest.length) {
-                longest = word;
-            }
-            word = "";
-        }
-    }
-    return longest;
-}
-console.log(longestWord("I love JavaScript programming"));
+// //Find the longest word in a sentence
+// function longestWord(sentence) {
+//     let word = "";
+//     let longest = "";
+//     for (let i = 0; i <= sentence.length; i++) {
+//         if (sentence[i] !== " " && i !== sentence.length) {
+//             word += sentence[i];
+//         } else {
+//             if (word.length > longest.length) {
+//                 longest = word;
+//             }
+//             word = "";
+//         }
+//     }
+//     return longest;
+// }
+// console.log(longestWord("I love JavaScript programming"));
 
 
-//Reverse the words in a sentence
-function reverseWords(sentence) {
-    let word = "";
-    let result = "";
-    for (let i = 0; i <= sentence.length; i++) {
-        if (sentence[i] !== " " && i !== sentence.length) {
-            word += sentence[i];
-        } else {
-            if (result === "") {
-                result = word;
-            } else {
-                result = word + " " + result;
-            }
-            word = "";
-        }
-    }
-    return result;
-}
-console.log(reverseWords("I love JavaScript"));
+// //Reverse the words in a sentence
+// function reverseWords(sentence) {
+//     let word = "";
+//     let result = "";
+//     for (let i = 0; i <= sentence.length; i++) {
+//         if (sentence[i] !== " " && i !== sentence.length) {
+//             word += sentence[i];
+//         } else {
+//             if (result === "") {
+//                 result = word;
+//             } else {
+//                 result = word + " " + result;
+//             }
+//             word = "";
+//         }
+//     }
+//     return result;
+// }
+// console.log(reverseWords("I love JavaScript"));
 
 
 // //Compress a string (e.g., "aaabbc" → "a3b2c1")
@@ -74,12 +74,14 @@ console.log(reverseWords("I love JavaScript"));
 // console.log(longestSubstring("abcabcbb"));
 
 
-// //Check whether one string is a rotation of another
-// function checkRotation(str1, str2) {
-//     if (str1.length !== str2.length) {
-//         return false;
-//     }
-//     let combined = str1 + str1;
-//     return combined.includes(str2);
-// }
-// console.log(checkRotation("waterbottle", "erbottlewat"));
+//Check whether one string is a rotation of another
+function checkRotation(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    let combined = str1 + str1;
+    return combined.includes(str2);
+}
+console.log(checkRotation("waterbottle", "erbottlewat"));
+
+
