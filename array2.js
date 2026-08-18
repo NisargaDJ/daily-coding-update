@@ -76,6 +76,6 @@ for (let i = 0; i < arr.length; i++) {
         index++;
     }
 }
-console.log(result); // [1, 3, 12, 5, 0, 0, 0]
+console.log(result); // [1, 3, 12, 5, 0, 0, 0];
 
 
