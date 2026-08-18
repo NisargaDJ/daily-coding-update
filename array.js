@@ -85,4 +85,4 @@ for (let i = 0; i < arr.length; i++) {
         }
     }
 }
-console.log(duplicates); // [2, 3]
+console.log(duplicates); // [2, 3];
